@@ -1,4 +1,6 @@
-<?php require("bdd.php");
+<?php 
+require("header.php");
+require("bdd.php");
 ?>
 
 <!DOCTYPE html>
