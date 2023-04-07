@@ -22,7 +22,7 @@ if (isset($_POST['connexion'])) {
             alert("Vous êtes connecté!")
         </script><?php }
             } 
-            var_dump($_SESSION);   
+            // var_dump($_SESSION);   
                     ?>
 
 <form id="connexion" action='' method='post'>
