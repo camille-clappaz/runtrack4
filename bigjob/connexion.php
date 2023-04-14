@@ -1,4 +1,5 @@
 <?php
+session_start();
 require("header.php");
 include("bdd.php");
 
@@ -17,10 +18,9 @@ if (isset($_POST['connexion'])) {
     <?php
     } else {
         $connectUser = $connectUser->fetchAll(PDO::FETCH_ASSOC);
-        $_SESSION = $connectUser[0]; ?>
-        <script>
-            alert("Vous êtes connecté!")
-        </script><?php }
+        $_SESSION = $connectUser[0]; 
+    header("Location: index.php");
+    }
             } 
             // var_dump($_SESSION);   
                     ?>

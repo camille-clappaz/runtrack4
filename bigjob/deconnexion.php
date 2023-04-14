@@ -1,7 +1,7 @@
 <?php
 require("header.php");
-require('user.php'); 
-$user = new User('', '', '', '', '');
-$user->disconnect();
+session_start();
+session_unset();
+session_destroy();
 header("Location:connexion.php");
 ?>

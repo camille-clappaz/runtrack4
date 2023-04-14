@@ -14,15 +14,6 @@ include("bdd.php");
 </form>
 <?php
 if (isset($_POST['submit'])) {
-    $prenom = $_POST['nom'];
-    $nom = $_POST['prenom'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-
-    $insertUser = $bdd->prepare("INSERT INTO utilisateurs(prenom,nom,email,password)VALUES(?,?,?,?)");
-    $insertUser->execute([$nom, $prenom, $email, $password]);
-}
-if (isset($_POST['submit'])) {
     $allowed_domain = 'laplateforme.io';
     $email = $_POST['email'];
     $nom = $_POST['nom'];
@@ -47,4 +38,5 @@ if (isset($_POST['submit'])) {
 }
 
 ?>
+ 
 <script src="./js/validInscription.js"></script>
